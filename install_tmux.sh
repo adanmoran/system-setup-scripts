@@ -32,6 +32,6 @@ function install_tmux() {
 		&& make install
 }
 
-install_tmux 2.2
+install_tmux 2.6
 
 # vim: ts=3 sw=3 sts=0 noet :
