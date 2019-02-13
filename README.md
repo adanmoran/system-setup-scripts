@@ -3,7 +3,7 @@
 This repository contains scripts that are used to install system utilities that
 I use regularly. Some are installed through the package manager, and others are
 downloaded and built from source by the scripts. Currently, these scripts work
-and are tested on Ubuntu 14.04.
+and are tested on Ubuntu 14.04. Many also work on Ubuntu 16.04.
 
 ### Installation
 
