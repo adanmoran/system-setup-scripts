@@ -30,17 +30,17 @@ function install_neovim() {
 
 }
 
-# This function installs neovim-remote, which allows other
-# programs to use neovim
-#function install_nvr() {
-#	if hash nvr 2>/dev/null; then
-#		echo "NVR already installed"
-#		return 0
-#	fi
-#	pip3 install neovim-remote
-#}
+ This function installs neovim-remote, which allows other
+ programs to use neovim
+function install_nvr() {
+	if hash nvr 2>/dev/null; then
+		echo "NVR already installed"
+		return 0
+   fi
+	pip3 install neovim-remote
+}
 
 install_neovim
-#install_nvr
+install_nvr
 
 # vim: ts=3 sw=3 sts=0 noet :
