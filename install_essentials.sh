@@ -17,4 +17,6 @@ apt-get install -y python-software-properties \
   pass \
   silversearcher-ag \
   stow \
-  unzip
+  unzip \
+  zathura \
+  latexmk
