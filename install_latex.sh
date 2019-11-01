@@ -29,7 +29,7 @@ function install_pplatex() {
 	local -r INSTALL_PREFIX=/usr/local
 
 	# Now pull the repo
-	if [[ ! -d "${INSTALL_PREFIX}/src/ppdflatex" ]]; then
+	if [[ ! -d "${INSTALL_PREFIX}/src/pplatex" ]]; then
 		mkdir -p "${INSTALL_PREFIX}/src/"
 		cd "${INSTALL_PREFIX}/src"
 		git clone https://www.github.com/stefanhepp/pplatex
@@ -49,8 +49,7 @@ function install_pplatex() {
 	cd ${PPLATEX_SRC}/build \
 		&& cmake ${PPLATEX_SRC} \
 		&& make \
-		&& ln -s ${PPLATEX_SRC}/build/src/pplatex /usr/bin/ppdflatex \
-	   && ln -s ${PPLATEX_SRC}/build/src/pplatex /usr/bin/ppluatex
+	   && ln -s ${PPLATEX_SRC}/build/src/pplatex /usr/bin/pplatex
 }
 
 function update_biblatex_ieee() {
@@ -72,6 +71,8 @@ function update_biblatex_ieee() {
 }
 
 install_latex
+# update_biblatex_ieee downloads the file correctly to texmf, but for some reason
+# latex does not recognize it. TODO: Fix this issue.
 #update_biblatex_ieee
 install_pplatex pplatex-1.0-rc2
 
