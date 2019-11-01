@@ -30,8 +30,8 @@ function install_neovim() {
 
 }
 
- This function installs neovim-remote, which allows other
- programs to use neovim
+# This function installs neovim-remote, which allows other
+# programs to use neovim
 function install_nvr() {
 	if hash nvr 2>/dev/null; then
 		echo "NVR already installed"
